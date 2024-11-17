@@ -1,6 +1,18 @@
-# Bot information
+import re
+from os import environ
+from Script import script 
 
-SESSION = environ.get('SESSION', 'FTMBOTZ')
+id_pattern = re.compile(r'^.\d+$')
+def is_enabled(value, default):
+    if value.lower() in ["true", "yes", "1", "enable", "y"]:
+        return True
+    elif value.lower() in ["false", "no", "0", "disable", "n"]:
+        return False
+    else:
+        return default
+
+# Bot information
+SESSION = environ.get('SESSION', 'TechVJBot')
 API_ID = int(environ.get('API_ID', '22141398'))
 API_HASH = environ.get('API_HASH', '0c8f8bd171e05e42d6f6e5a6f4305389')
 BOT_TOKEN = environ.get('BOT_TOKEN', "8034842897:AAHxrjsxzMudiG54OPTHds6oVHh3fvPDqws")
