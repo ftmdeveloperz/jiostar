@@ -60,7 +60,7 @@ else:
     FILE_DB_URI = environ.get('FILE_DB_URI', "mongodb+srv://ftm:ftm@cluster0.cntf9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") # This Db Is For File Data Store
     SEC_FILE_DB_URI = environ.get('SEC_FILE_DB_URI', "mongodb+srv://ftm:ftm@cluster0.cntf9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") # This Db is for File Data Store When First Db Is Going To Be Full.
     
-DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster 0")
+DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'jiostarcollections')
 
 
